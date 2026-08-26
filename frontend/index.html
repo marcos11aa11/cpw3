@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Diário de Estudo</title>
+    <style>
+        body { 
+            background: lightslategray; 
+            font-family: sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        form { display: flex; flex-direction: column; gap: 10px; width: 250px; }
+        input, textarea, button { padding: 8px; }
+    </style>
+</head>
+<body>
+    <!-- Form envia dados normais via POST para a rota /recado -->
+    <form action="http://localhost:3000/estudo" method="POST">
+        <h2>Diário de Estudo</h2>
+        <input type="text" name="materia" placeholder="Matéria" required>
+        <textarea name="resumo" placeholder="O que você aprendeu?" required></textarea>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
